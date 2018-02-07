@@ -1,0 +1,6 @@
+- viet extension tao moi
+show helloworld, home, catagory, product detail
+
+- extention show home page, getlistproduct catagory men limit 4 products
+
+- tao 1 template lam 1 theme,
