@@ -1,0 +1,9 @@
+Template: \Magento\Framework\View\Element\Template
+
+Action: \Magento\Framework\App\Action\Action
+
+Content: \Magento\Framework\App\Action\Context $context
+
+PageFactory: \Magento\Framework\View\Result\PageFactory $resultPageFactory
+
+
