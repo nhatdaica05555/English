@@ -14,3 +14,4 @@ IdentityInterface: \Magento\Framework\DataObject\IdentityInterface (Model -> imp
 
 AbstractCollection: \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection
 
+https://drive.google.com/file/d/1rQYpkIDXK7gaZp7pt03tOjYcenfNFcIl/view
