@@ -17,3 +17,4 @@ AbstractCollection: \Magento\Framework\Model\ResourceModel\Db\Collection\Abstrac
 https://drive.google.com/file/d/1rQYpkIDXK7gaZp7pt03tOjYcenfNFcIl/view
 
 https://www.froala.com/design-blocks#64v23313y2x2r25464032374r2740303
+

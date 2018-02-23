@@ -1,0 +1,40 @@
+- admin grid
+	+ create admin grid and follow the available code ?
+	+ how many files we need to create ?
+
+
+- Revise : 
+	* events?
+		+ how many files we need to create? ---- 3 files: controller, events.xml , observer
+	* get data from configuration?
+		+ create : system.xml
+		+ get data : 
+	* get data from table?
+		+ create table
+		+ get data:
+		+ show into frontend:
+
+- what is essential things of BLOCK and CONTROLLER?
+
+- how to create command line? have agurment and without argument
+	+ how many requisite files? 
+
+
+
+- why we have to create commandline?
+	
+- Merge menu and separate many parts
+
+- how to change routing, instead of accessing login we redirect it to ur module, ur controller
+
+- Indexer , what is it ,  why we use it and what problem if we dont use it
+
+---------------------------------------------------------------------------
+
+- Add customer attributes
+
+- Add Product Attributes
+
+- Add Category Attributes
+
+- Rewrite Controller and Chage routing , compare these actions
