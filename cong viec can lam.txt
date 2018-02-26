@@ -7,6 +7,10 @@
 		* Index.php : getConfig->getTitle->prepend((_('Posts')))
 		* 
 	+ how many files we need to create ? table, menu, routes, controller, 
+		* InstallSchema
+		* menu.xml
+		* adminhtml/routes.xml
+		* 
 
 
 - Revise : 
@@ -21,6 +25,8 @@
 		+ show into frontend: 
 
 - what is essential things of BLOCK and CONTROLLER?
+	+ BLOCK : EXTENDS Template
+	+ COTNROLLER : EXTENDS Action
 
 - how to create command line? have agurment and without argument
 	+ how many requisite files?  etc/di.xml
@@ -55,8 +61,58 @@
 - Add customer attributes
 	+  InstallDAta : install() addAttribute(Model\customer , attribute 'simple_attribute',[]);
 
-- Add Product Attributes
+- Add Product Attributes	
+	+ InstallData : install() addAttribute(Model\Product , attribute 'simple_attribute' , [])
 
 - Add Category Attributes
+	+ InstallData : install() addAttribute(Model\Category , attribute 'simple_data' , [])
 
 - Rewrite Controller and Chage routing , compare these actions
+	* it's have the same definition
+
+---------------------------------------------------------------
+
+
+- What is Cron Job?
+	+ Cron Job will run automatically in exactly time and date, 
+	  it's important to set schedule,as reindexing , auto-update currence rate, mail..
+	
+- How to create cron job
+	
+	+ Cron/Test.php 
+		* execute() : create $writer(zend/log/writer) use cron.log in var/log/cron.log and $logger(zend/log/logger), 
+			$logger->addWriter($writer)
+			$logger->info(__METHOD__)
+
+	+ crontab.xml
+		* group : id = 'default'
+			> job : instance = ..\cron\test method = execute name = 
+			> schedule
+
+-----------WIDGET--------------------
+- that is widget?
+	* it's a powerfull fucntionalities: dynamic product data, dynamic lists of recently viewed products
+		promotional banners
+	* it's similar to an optimized frontend extension
+
+- How to create a widget in magento2 ( 3 files: widget => block =>  )
+	* declare widget : etc/widget.xml
+		> widget.xml : class = Block\Widget\Posts id = ...
+			label , discription , paramaters name = will be send to template
+	
+	-> create widget (block , parameter name = abc ->template , label , )
+
+-------------Get info from Header ---------
+
+- what we need to get?
+
+	* logo url , alt text , logo size , ....
+	* determine Block of attributes (Header Logo) what we need to get.
+	* 
+	
+-------------\Magento\Catalog\Model\ProductRepository $productRepository----------
+
+- get product by sku  : get($sku)
+- get product by id :	getById($id)
+- get key for cache  : getCacheKey($data)
+
