@@ -1,6 +1,12 @@
 - admin grid
-	+ create admin grid and follow the available code ?
-	+ how many files we need to create ?
+	+ create admin grid and follow the available code ? 
+		* create table database -> create resource model and model collection
+		* create routes in adminhtml/routes.xml with full url mageplaza/post/index
+		* create admin menu, menu.xml
+		* create Controller for Adminhtml/Post/Index.php
+		* Index.php : getConfig->getTitle->prepend((_('Posts')))
+		* 
+	+ how many files we need to create ? table, menu, routes, controller, 
 
 
 - Revise : 
@@ -8,30 +14,46 @@
 		+ how many files we need to create? ---- 3 files: controller, events.xml , observer
 	* get data from configuration?
 		+ create : system.xml
-		+ get data : 
+		+ get data : use block and template, ScopeInterface
 	* get data from table?
-		+ create table
-		+ get data:
-		+ show into frontend:
+		+ create table : installschema, installdata, upgrade... 
+		+ get data : call to resourceModel , collection, ->getCollection
+		+ show into frontend: 
 
 - what is essential things of BLOCK and CONTROLLER?
 
 - how to create command line? have agurment and without argument
-	+ how many requisite files? 
+	+ how many requisite files?  etc/di.xml
+		* di.xml : type = commandlist , item = console\sayhello
+		* \sayhello : 
+			> protected function configure and execute
+			> configure : setName , setDecrisption, setDefinition , we also create array $option = new InputOption at the end is parent:configure();
+			> execute(inputinterface,outputinterface) : show result, use getOption() to check that have or not $option
+		
 
-
-
-- why we have to create commandline?
+- why we have to create commandline? : 
+	* indexer , deploy static file view , css->less ,transtate dictionary 
 	
-- Merge menu and separate many parts
+- Merge menu and separate many parts : 
+	* it depends on parent , example :  hello 1 and hello 2 are childs of parent catalog , hello 12 , hello 22 are childs of hello 1 and hello 2
 
 - how to change routing, instead of accessing login we redirect it to ur module, ur controller
-
+	* Change routing:
+		> use 'before' , module route A(custom routes) before route B(login, register ....) 
+		> set another url have the same structure
+	
 - Indexer , what is it ,  why we use it and what problem if we dont use it
+	* improve performance of storefront, 
+	* a huge structure including users, prices , categories ...
+
+	* indexer.xml : id , view_id(is id of mview.xml), class model/index/test
+	* mview.xml : id, class , group , subscriptions( table name = "abc" entiy_colum ="entity_id")
+	* index/test: when a product is saved , test.php will be loaded 
 
 ---------------------------------------------------------------------------
 
 - Add customer attributes
+	+  InstallDAta : install() addAttribute(Model\customer , attribute 'simple_attribute',[]);
 
 - Add Product Attributes
 
