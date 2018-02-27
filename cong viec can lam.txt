@@ -95,14 +95,14 @@
 		promotional banners
 	* it's similar to an optimized frontend extension
 
-- How to create a widget in magento2 ( 3 files: widget => block =>  )
+- How to create a widget in magento2 ( 3 files: widget => block =>  templates)
 	* declare widget : etc/widget.xml
 		> widget.xml : class = Block\Widget\Posts id = ...
 			label , discription , paramaters name = will be send to template
 	
 	-> create widget (block , parameter name = abc ->template , label , )
 
--------------Get info from Header ---------
+-------------Get info from Header \Magento\Theme\Block\Html\Header\Logo $logo,---------
 
 - what we need to get?
 
@@ -115,4 +115,64 @@
 - get product by sku  : get($sku)
 - get product by id :	getById($id)
 - get key for cache  : getCacheKey($data)
+
+-------- \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory $productCollectionFactory-------
+
+
+
++ $collection->setPageZise(3)
+
++ addFieldToFilter('user_id', ['eq' => $loggedInUser])
+
++ addCategoriesFilter(['eq'=>$categories]);
+
++ $collection->addAttributeToSelect('*');
+
+-----------------Call blocks from phtml------------
+
++ $blockObj = $block->getLayout()->createBlock('demo\hello\block\display');
+
+
+----------------get Category from a specific Product-----------
+
++ GetCategoryCollection($isACtive=true, $level=false, $sortBy = false, $pageSize = false)
+
+	* isACtive :  addIsActiveFilter()
+	* $level : addLevelFilter($level)
+	* $sortBy : addOrderField($sortBy)
+	* 
+
++ getProductById($id)
+	* getById($id)
+
++ registry('current_product')
+
+==> get info of product by ID  getProductById 	
+  --> get id of category getCategoryIds 
+  --> getCategoryCollection -> addAttributeToFilter('entity_id'  , id of category we got above)
+
+----------REgister / registry -------
++ authorize you to register global variable that supports the static methood
+
++ -> registry('current_product')
++ -> registry('current_category')
++ -> 
+
+
+-------- sEND A EMAIL ---------
+
++ Create a email tempalte in a phtml file
+
+
+
++ declare your email template
+
++ create function to send your mail
+
+--------------
+
+
+
+
+
 
