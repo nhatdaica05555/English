@@ -1,0 +1,7 @@
+- add account number 1 trong account info 1 field , nam sau VAT number,cap nhat duoc , filter , show sau khi save, show account number ra sau sign in 
+
++ tao 1 trang blog , 
+co page rieng , show 3 bai dau tien + phan trang, quan li trong admin them xoa sua,
+noi dung : title , hinh anh , content, 
+
+tao blog detail , show all info , 

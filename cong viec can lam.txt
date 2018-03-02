@@ -169,7 +169,9 @@
 
 + create function to send your mail
 
---------------
+--------------ROUTING---
++ route dinh danh ten module , dung url de tim module va execute action controller
++ froncontroller : se dc goi trong lop http de dinh tuyen request request laf cai ra tim controller/action
 
 
 
